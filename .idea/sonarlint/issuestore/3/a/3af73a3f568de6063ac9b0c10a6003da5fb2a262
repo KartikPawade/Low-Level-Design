@@ -1,0 +1,8 @@
+
+1
+java:S1700"Rename field "board"(ñÙöÙ8üçÀõ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(’çš8şçÀõ1
+D
+java:S1068"(Remove this unused "size" private field.(‰öÆ)8ŒèÀõ1
+F
+java:S1068")Remove this unused "board" private field.(ñÙöÙ8ŒèÀõ1
