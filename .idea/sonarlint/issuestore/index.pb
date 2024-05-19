@@ -756,3 +756,11 @@ Q.idea/sonarlint/securityhotspotstore/5/8/587bdc7e555414ff8e22d4bd3578027f90e11d
 Q.idea/sonarlint/securityhotspotstore/5/f/5fbe86bc17a245a8b7008ae05e3b5e71c9940ece,2\f\2fcb1bf552e1b658936cc5428a0e665eec73f28b
 Å
 Q.idea/sonarlint/securityhotspotstore/6/1/61bb7e2dadd1b5e037cfa1ef63627114647f98b2,a\2\a2481378a3591c578413d9eaaa545fde074a5532
+}
+Msrc/main/java/org/lld/design_patterns/creational/abstractfactory/Vehicle.java,3\c\3cb33c36e6ac0d1a4c3f73a68b1dc1ef05f871e4
+z
+Jsrc/main/java/org/lld/design_patterns/creational/abstractfactory/Main.java,8\2\829696cc8f8b54b17a9046bfcba6c2cd7c2b058d
+Å
+Q.idea/sonarlint/securityhotspotstore/3/c/3cb33c36e6ac0d1a4c3f73a68b1dc1ef05f871e4,9\2\9245a5335904427295b79f79a6a0ad935331af5f
+Å
+Q.idea/sonarlint/securityhotspotstore/8/2/829696cc8f8b54b17a9046bfcba6c2cd7c2b058d,8\a\8aa7f88bcde608aba3db8d50a17958f2cd3bd11f
