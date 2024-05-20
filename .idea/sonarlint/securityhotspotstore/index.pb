@@ -764,3 +764,7 @@ Jsrc/main/java/org/lld/design_patterns/creational/abstractfactory/Main.java,8\2
 Q.idea/sonarlint/securityhotspotstore/3/c/3cb33c36e6ac0d1a4c3f73a68b1dc1ef05f871e4,9\2\9245a5335904427295b79f79a6a0ad935331af5f
 Å
 Q.idea/sonarlint/securityhotspotstore/8/2/829696cc8f8b54b17a9046bfcba6c2cd7c2b058d,8\a\8aa7f88bcde608aba3db8d50a17958f2cd3bd11f
+y
+Isrc/main/java/org/lld/design_patterns/behavioural/nullobject/Vehicle.java,6\5\65c65d35dfff8532ea87485b35cc6c0f9fc7db7b
+Å
+Q.idea/sonarlint/securityhotspotstore/6/5/65c65d35dfff8532ea87485b35cc6c0f9fc7db7b,f\a\fa1d85fef206e4926929a276c3002674161b6634
