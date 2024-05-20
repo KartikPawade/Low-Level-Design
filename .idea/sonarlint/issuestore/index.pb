@@ -768,3 +768,11 @@ y
 Isrc/main/java/org/lld/design_patterns/behavioural/nullobject/Vehicle.java,6\5\65c65d35dfff8532ea87485b35cc6c0f9fc7db7b
 Å
 Q.idea/sonarlint/securityhotspotstore/6/5/65c65d35dfff8532ea87485b35cc6c0f9fc7db7b,f\a\fa1d85fef206e4926929a276c3002674161b6634
+~
+Nsrc/main/java/org/lld/design_patterns/structural/adapter/WeightingMachine.java,8\3\836fd6248f695a3399d0ccc9fca05c23a2336ffe
+w
+G.idea/sonarlint/issuestore/f/a/fa1d85fef206e4926929a276c3002674161b6634,2\4\243b02577b5886ce7cf5c6045d5bb6b33e6cad54
+Å
+Q.idea/sonarlint/securityhotspotstore/f/a/fa1d85fef206e4926929a276c3002674161b6634,f\e\fe36512f48512d06edc0a05ac801f1df9f32889e
+Å
+Q.idea/sonarlint/securityhotspotstore/8/3/836fd6248f695a3399d0ccc9fca05c23a2336ffe,c\c\cc712874a957c9d2d4e1547f7ad457c3637a81e6
