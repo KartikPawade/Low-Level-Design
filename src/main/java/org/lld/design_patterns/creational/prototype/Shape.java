@@ -1,4 +1,4 @@
-package org.lld.design_patterns.structural.prototype;
+package org.lld.design_patterns.creational.prototype;
 
 public abstract class Shape {
 
