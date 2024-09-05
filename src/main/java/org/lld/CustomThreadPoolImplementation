@@ -1,0 +1,85 @@
+package org.lld.threadpool;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+public class CustomThreadPoolImplementation {
+    /**
+     * ThreadPoolExecutor:
+     * 1. First the task will check if thread is available to process event, if not
+     * 2. Then it will put the task in queue to be processed by thread once it is available, if not then,
+     * 3. Then the task will be processed by other available threads(maxPoolSize), if they are alos busy then,
+     * 4. Then the task will be handled based on handler
+     * IMP: Always close shutdown the ThreadPoolExecutor...
+     * <p>
+     * Future:
+     * 1. Future contains Void and the result is null, Callable return value
+     * 2. get() method waits for completion of task.
+     * <p>
+     * CompletableFuture:
+     * 1. Give Additional functionality to Future.
+     * 2. Allows to chain the behaviour using thenApplyAsync(), thenCombineAsync(), theAcceptAsync()[return nothing].
+     * 3. Cannot take void value.
+     * 4. Need to pass ThreadPoolExecutor, by default it uses ForkJoinPool
+     *
+     * @param args
+     */
+
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 4, 5, TimeUnit.MINUTES, new ArrayBlockingQueue<>(3), new CustomThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
+        threadPoolExecutor.allowCoreThreadTimeOut(true);
+
+        Future<?> future = threadPoolExecutor.submit(() -> {
+            try {
+                Thread.sleep(9000);
+                System.out.println("Task1");
+
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        System.out.println("if task is done: " + future.isDone());
+        future.get();
+        System.out.println("if task is done after get(): " + future.isDone());
+
+        System.out.println("==================");
+
+        CompletableFuture<Integer> completableFuture = CompletableFuture.supplyAsync(() -> {
+            try {
+                Thread.sleep(9000);
+                System.out.println(Thread.currentThread().getName());
+            } catch (Exception e) {
+                System.out.println("Exception: " + e.getMessage());
+            }
+            return 3;
+        }, threadPoolExecutor).thenApplyAsync((Integer a) -> {
+            System.out.println("the Apply");
+            Thread.currentThread().getName();
+            return 4;
+        });
+
+        completableFuture = completableFuture.thenApplyAsync((Integer a) -> {
+            System.out.println("Then Apply Async");
+            return 100000;
+        }, threadPoolExecutor);
+
+        System.out.println("Completable Future result: " + completableFuture.get());
+        System.out.println("66");
+        threadPoolExecutor.shutdownNow();
+    }
+
+
+}
+
+class CustomThreadFactory implements ThreadFactory {
+
+    @Override
+    public Thread newThread(Runnable r) {
+        return new Thread(r);
+    }
+}
